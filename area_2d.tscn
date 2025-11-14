@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfagvirs43jeu"]
+
+[sub_resource type="Gradient" id="Gradient_vc6sv"]
+offsets = PackedFloat32Array(0, 0.048245613, 0.1754386, 0.25877193, 0.8201754, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.972549, 0.047058824, 0.047058824, 1, 0.67728865, 0.580962, 0, 1, 0.37826154, 0.0016542539, 0.2749876, 1, 0.9949399, 0.82434267, 0.82434267, 1, 1, 1, 1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nsakb"]
+radius = 73.109505
+
+[node name="Area2D" type="Area2D"]
+
+[node name="magic" type="Node2D" parent="."]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="magic"]
+amount = 2000
+lifetime = 0.3
+speed_scale = 0.35
+randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 86.63
+gravity = Vector2(-3000, 980)
+angular_velocity_min = -512.0
+scale_amount_max = 11.0
+color_ramp = SubResource("Gradient_vc6sv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_nsakb")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true

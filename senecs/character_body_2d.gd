@@ -47,6 +47,20 @@ func _physics_process(delta: float) -> void:
 
 
 	move_and_slide()
+	
+	if Input.is_action_just_pressed("magic"):
+		var magicNode = load("res://area_2d.tscn")
+		var newMagic = magicNode.instantiate()
+		#if $AnimatedSprite2D.flip_h == false:
+			#.dirction = 1
+		#else:
+			#newMagic.direction = 1
+		newMagic.set_position(%magics.global_transform.origin)
+		get_parent().add_child(newMagic)
+
+
+
+
 
 
 
