@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://bec0hqui6j537"]
+[gd_scene load_steps=63 format=4 uid="uid://bec0hqui6j537"]
 
 [ext_resource type="Texture2D" uid="uid://b7x27dil6ev58" path="res://Plant Animations/Plant Animations/Mossy Assets/Mossy Tileset/Mossy - TileSet.png" id="1_5pt58"]
 [ext_resource type="Texture2D" uid="uid://baxm4pmfoxe7w" path="res://Plant Animations/Plant Animations/Mossy Assets/Mossy Tileset/Mossy - BackgroundDecoration.png" id="2_4ogt7"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://dr1dcsibppgmd" path="res://sprites-3/Props/lever.png" id="24_qv3b5"]
 [ext_resource type="Texture2D" uid="uid://bnt5i17o1vue8" path="res://sprites-3/Props/railway.png" id="25_8cncu"]
 [ext_resource type="Texture2D" uid="uid://dsx16qebh1ee1" path="res://sprites-3/Tilesets/Ground - dark.png" id="26_j3h2x"]
+[ext_resource type="PackedScene" uid="uid://brfbdhkwrj785" path="res://audio world.tscn" id="29_s5esf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w30s8"]
 texture = ExtResource("4_115cd")
@@ -13118,6 +13119,8 @@ scale = Vector2(0.6, 0.6)
 [node name="CharacterBody2D4" parent="Area2D" instance=ExtResource("6_jocbu")]
 position = Vector2(5130, -51.000004)
 scale = Vector2(0.6, 0.6)
+
+[node name="Node2D" parent="." instance=ExtResource("29_s5esf")]
 
 [connection signal="body_entered" from="tilemaps/TileMap/chanr" to="Player" method="_on_chanr_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]

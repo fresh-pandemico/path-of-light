@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=4 uid="uid://dcwlkf6mue6q0"]
+[gd_scene load_steps=61 format=4 uid="uid://dcwlkf6mue6q0"]
 
 [ext_resource type="Texture2D" uid="uid://cxncyfhlgfgx1" path="res://sprites-1/sprites/world_tileset.png" id="1_sh22k"]
 [ext_resource type="Texture2D" uid="uid://lng2hih02il6" path="res://sprites-1/sprites/Terrain/Terrain (16x16).png" id="2_x2m57"]
@@ -27,6 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://baxm4pmfoxe7w" path="res://Plant Animations/Plant Animations/Mossy Assets/Mossy Tileset/Mossy - BackgroundDecoration.png" id="25_m1cbc"]
 [ext_resource type="PackedScene" uid="uid://b318lwwy33ouy" path="res://senecs/player.tscn" id="26_x2m57"]
 [ext_resource type="Texture2D" uid="uid://56v0dwjsuavf" path="res://sprites-1/door.png" id="27_knteu"]
+[ext_resource type="AudioStream" uid="uid://d1aqwr6a55gt1" path="res://sounds/music/our game.wav" id="28_nnnec"]
+[ext_resource type="PackedScene" uid="uid://brfbdhkwrj785" path="res://audio world.tscn" id="29_jcejn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_06xn1"]
 texture = ExtResource("1_sh22k")
@@ -1916,6 +1918,12 @@ position = Vector2(38500, 5569)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="water"]
 position = Vector2(1828, 636.5)
 shape = SubResource("RectangleShape2D_knteu")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("28_nnnec")
+autoplay = true
+
+[node name="Node2D" parent="." instance=ExtResource("29_jcejn")]
 
 [connection signal="body_entered" from="Door/finsh" to="Player" method="_on_finsh_body_entered"]
 [connection signal="body_entered" from="water" to="Player" method="_on_water_body_entered"]
