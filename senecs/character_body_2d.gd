@@ -69,3 +69,18 @@ func _physics_process(delta: float) -> void:
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("player"):
 		get_tree().change_scene_to_file("res://senecs/world.tscn")
+
+
+func _on_chanr_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		get_tree().change_scene_to_file("res://puzzle.tscn")
+
+
+func _on_finsh_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		get_tree().change_scene_to_file("res://senecs/main_mune.tscn")
+
+
+func _on_water_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		get_tree().change_scene_to_file("res://world_2.tscn")
