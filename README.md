@@ -1,12 +1,36 @@
-# 003_Sliding_Puzzle_Godot
-A simple sliding puzzle game made with Godot Engine 4.
+# Path of Light
 
-Each tile has a number from 1 to 15. The tiles are randomly shuffled at the start of the game and you should order the tiles as in the following screenshot:
+A 2D platformer game built with Godot Engine 4, where you embark on an epic journey through mystical worlds filled with challenges, enemies, and magical elements.
 
-You can watch the video on how I made it here:
+## Features
 
-https://youtu.be/aODh7LNiEbI
+- **Dynamic Gameplay**: Navigate through various worlds with unique environments and obstacles.
+- **Enemies and Traps**: Face off against slimes, animated plants, spiked balls, and other hazards.
+- **Magic System**: Use magic abilities to overcome challenges.
+- **Smooth Controls**: Responsive movement, jumping, and dashing mechanics.
+- **Audio and Visuals**: Immersive sound effects, music, and pixel art graphics.
 
+## Controls
 
-<img src="https://user-images.githubusercontent.com/122635521/230923582-b278098f-17cf-46ed-9683-900b39a416c6.png" width=400px>
+- **A & D**: Move left/right
+- **Space**: Jump
+- **Shift**: Dash
+- **Mouse Left Click**: Cast magic
+
+## Installation
+
+1. Ensure you have Godot Engine 4 installed.
+2. Clone or download this repository.
+3. Open the project in Godot by selecting the `project.godot` file.
+4. Run the game from the editor or export it to your desired platform.
+
+## Credits
+
+- **pandemico**: FX, music, and some pixel art
+- **husam and fayez**: Code
+- **faisal and mutasem**: Level design
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
